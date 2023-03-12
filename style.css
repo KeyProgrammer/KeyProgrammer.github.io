@@ -1,0 +1,210 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    height: 100px;
+    background: rgb(3, 3, 79);
+    box-shadow: 1px 8px 27px -11px rgba(32, 32, 37, 1);
+}
+
+.menu-logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    padding: 7px;
+    background-image: url(images/logotyp.png);
+    background-repeat: no-repeat;
+    background-size: 440px;
+    background-origin: content-box;
+}
+
+.menu-options {
+    height: 100%;
+}
+
+.menu {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.menu a.menu-option {
+    color: white;
+    font-size: 17px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.menu a.menu-option:hover {
+    background: #354B7D;
+    transition: 0.9s;
+}
+
+.menu-options ul li {
+    display: inline-block;
+}
+
+.menu-options ul {
+    float: right;
+    margin: 35px;
+}
+
+.main-footer {
+    color: black;
+    bottom: 0;
+    width: 100%;
+    background-color: #efefef;
+    height: 80px;
+    box-shadow: -2px -5px 8px -2px rgba(66, 68, 90, 1);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.Programmer-section img {
+    border: 1.5px solid black;
+    border-radius: 40px;
+    float: left;
+    margin: 15px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Programmer-section p {
+    text-align: justify;
+}
+
+/*
+Dodać z JS potem
+.menu #hamburger {
+    display: none;
+*/
+@media(max-width: 1120px) {
+    .menu a.menu-option {
+        color: black;
+    }
+
+    .menu {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu-logo {
+        float: left;
+        padding: 7px;
+        width: 90%;
+        height: 100%;
+        background-image: url(images/logotyp.png);
+        background-repeat: no-repeat;
+        background-size: 440px;
+        background-origin: content-box;
+    }
+
+    .menu-options {
+        margin-top: 1px;
+        display: block;
+        background: white;
+        border-bottom: 1px solid black;
+        border-top-left-radius: -50px -20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation: mymove 0.6s;
+        position: relative;
+    }
+
+    @keyframes mymove {
+        from {
+            top: -4%;
+        }
+
+        to {
+            top: 0%;
+        }
+    }
+
+    .menu-options ul {
+        width: 100%;
+        margin: 0px;
+        padding: 35px;
+        top: 80px;
+        text-align: center;
+
+    }
+
+    .menu a.menu-option:hover {
+        background: none;
+        color: blue;
+        transition: 0.3s;
+    }
+}
+
+@media(max-width: 900px) {
+    .menu-logo {
+        background-image: url(images/logotyp.png);
+        background-size: 290px;
+        padding: 25px;
+        background-position: center;
+        width: 100%;
+    }
+
+    .menu-options {
+        margin-top: 1px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid black;
+        position: relative;
+    }
+
+    @keyframes mymove {
+        from {
+            top: -2%;
+        }
+
+        to {
+            top: 0%;
+        }
+    }
+
+    .menu-options ul li {
+        font-size: 20px;
+        width: 100%;
+        margin: 0px;
+        top: 80px;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .menu-options ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        top: 80px;
+        text-align: center;
+    }
+
+    .menu {
+        float: left;
+        width: 100%;
+        height: 220px;
+    }
+
+    .Programmer-section img {
+        height: auto;
+        float: none;
+        margin: auto;
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+}
