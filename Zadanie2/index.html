@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Kółko i krzyżyk</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>    
+     <h1>KÓŁKO i KRZYŻYK</h1>
+    <div class="wrapper">
+        <p class="panel"></p>
+        <div class="board">
+            <div class="board__item" data-position="0"></div>
+            <div class="board__item" data-position="1"></div>
+            <div class="board__item" data-position="2"></div>
+            <div class="board__item" data-position="3"></div>
+            <div class="board__item" data-position="4"></div>
+            <div class="board__item" data-position="5"></div>
+            <div class="board__item" data-position="6"></div>
+            <div class="board__item" data-position="7"></div>
+            <div class="board__item" data-position="8"></div>
+        </div>
+        
+        <div id="menu">
+        <div class="select">
+            <p class="text_info">Rozwiń listę, aby wybrać rodzaj gry: </p><br>
+    <select id="mode-select">
+        <option value="pvp">-- Gracz vs Gracz --</option>
+        <option value="easy">-- Gra z komputerem --</option>
+    </select>
+    <br>
+     <p class="text_info">Rozwiń listę, aby wybrać znak: </p>
+    <select id ="char-select" style="margin-top:10px">
+        <option value="X">-- Wybieram krzyżyk --</option>
+        <option value="O">-- Wybieram kółko --</option>
+    </select>
+</div>
+        <button class="reset-button">ZACZNIJ NOWĄ TURĘ!</button></div>
+    </div>
+    <script src ="index.js"></script>
+</body>
+
+</html>

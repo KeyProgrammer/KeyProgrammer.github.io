@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:beige;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.panel {
+    height: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:black;
+    
+
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 4px solid #6c452d;
+}
+
+.board__item {
+    background-color:#d1b4a1;
+    border-radius: 5px;
+    border: 4px solid #6c452d;
+    transition: all 0.05s linear;
+    cursor: pointer;
+    position: relative;
+}
+
+.board__item:hover {
+    background-color: #c3a591;
+    box-shadow: inset 5px 5px 15px 2px #746256;
+
+}
+
+/* musi dać ::before oraz content i wtedy przez content
+   dodajemy rzeczy do pola  */
+.board__item--filled-X::before,
+.board__item--filled-X::after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: #46322c;
+}
+
+.board__item--filled-X::before {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.board__item--filled-X::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.board__item--filled-O::before {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 65px;
+    border: 5px solid #6c452d;
+    transform: translate(-50%, -50%);
+}
+
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 4px solid #6c452d;
+    cursor: pointer;
+    transition: all 0.05s linear;
+    width: 344px;
+    height: 70px;
+}
+
+.reset-button:hover {
+    background-color: #ddd;
+    box-shadow: inset 3px 3px 5px 6px #ccc;
+
+}
+
+
+/* SELECT - lista rozwijana */
+
+select {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+
+}
+
+
+.select select {
+    font-family: 'Arial';
+    display: inline-block;
+    width: 344px;
+    cursor: pointer;
+    padding: 11px 22px;
+    outline: 0;
+    border: 3px solid #6c452d;
+    border-radius: 7px;
+    background: #d1b4a1;
+    color: black;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select select:hover,
+.select select:focus {
+    color: #000000;
+    background: #c3a591;
+}
+
+.select select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+
+.text_info {
+    margin-top: 20px;
+    text-align: center;
+    font-family: arial;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#46322c;
+}
+
+.text_info:first-child{
+        margin-bottom: -10px;
+
+}
+h1 {
+    text-align: center;
+    font-family: arial;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 60px;
+    color: #46322c
+
+}
+
+
+
+
